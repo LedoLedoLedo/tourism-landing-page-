@@ -1,38 +1,270 @@
-.App {
+body{
+  background-image: url(./components/AdobeStock_248051655\ copy.jpg);
+  background-size: cover;
+  color: #fff;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: brown; */
+}
+
+p{
+  font-size: 20px;
+}
+
+.textwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* height: 100%;  */
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: auto 1em;
+}
+
+.navright {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color:#fff;
+  text-decoration:none;
+}
+
+ul.nav li {
+  /* border-right:1px solid #189b80; you can change the border color matching to your background color */
+  float:left;
+  list-style-type: none;
+}
+ul.nav a {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding:0 28px;
+  color:#fff;
+  text-decoration:none;
+}
+
+
+ 
+
+.head{
+  padding-bottom: 100px;
+}
+
+/* .navleft{
+  margin-right: 200vh;
+  font-weight: bold;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+ }  */
+
+.firstDiv {
+  /* background-color: aqua; */
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+ /* .list { 
+  display: flex;
+  flex-direction: row;
+  margin-left:80vw ;
+  
+ } */
+   /* padding: 2%;  */
+
+
+ .card {
+  height: 500px;
+  width: 400px;
+  margin-left: 5vw;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+
+}
+
+.card .btn-container, .card h1, .card p {
+  margin: auto 25px;
+}
+
+.card h1 {
+  font-size: 2.5em;
+}
+
+.card p {
+  font-weight: 100;
+  font-size: 1em;
+}
+
+.card .btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .btn-container button {
+  background-color: rgba(255, 255, 255, 0.25); 
+  /* 
+    the opacity of the nav button is 0.75
+    the opacity of the card is 0.50, 
+    the opacity of the card button is 0.25,
+    0.25 + 0.50 = 0.75, which means the 
+    card buttons and the nav button 
+    end up the same hue of white
+  */
+}
+
+button {
+  border: none;
+  border-radius: 100px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: rgb(23, 150, 190); /* lighter font*/
+  width: 170px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  transition: 500ms ease;
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  color: rgb(23, 110, 150); /* darker font */
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 12px;
+}
+
+nav {
+  margin: auto 5vw;
+}
+
+nav .btn-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav h1 {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.nav a {
+  font-size: 1.3em;
 }
+
+.navright h1 {
+  font-size: 3em;
+  margin: auto 0px;
+  margin-right: 1em;
+}
+
+.foot {
+  /* position:absolute; */
+  /* bottom: 0; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  /* min-height: 10vh; */
+  /* min-height: 100px;
+  max-height: 100px; */
+}
+
+.formWrapper {
+  width: 50%; 
+  margin-top: -100px; /*the negative margin brings the form up so it's not against the bottom of the screen*/
+}
+
+.formWrapper form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.formWrapper input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 15px;
+  /* padding-left: 50px; */
+  box-shadow: rgb(200,200,200) 0px 0px 0px 3px;
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(5px);
+  transition: 500ms ease;
+}
+
+
+.formWrapper input:first-of-type {
+  border-radius: 50px 0px 0px 50px;
+}
+
+.formWrapper input:last-of-type {
+  border-radius: 0px 50px 50px 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  color: #fff;
+}
+
+.formWrapper label {
+  color: rgb(180,180,180);
+  margin-right: -45%;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.formWrapper input:focus, .formWrapper input:focus-visible, .formWrapper input:focus-within  {
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: rgb(180,180,180) 0px 0px 0px 3px;
+  color: #000;
+}
+
+
+.formWrapper button {
+  color: #fff;
+  background-color: darkorange;
+  box-shadow: rgb(255,255,255) 0px 0px 0px 3px, rgb(200,200,200) 0px 0px 0px 6px;
+  width: 1em;
+  height: 1em;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+}
+
+.formWrapper button:hover, .formWrapper button:focus {
+  background-color: orange;
+  outline: none;
+  box-shadow: rgb(255,255,255) 0px 0px 0px 3px, rgb(180,180,180) 0px 0px 0px 6px;
+}
+
